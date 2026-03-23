@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Scopri tutti i servizi IFL-Network: certificazioni ISO, sicurezza in azienda, controllo di gestione e brevetti industriali. Lecco.">
+  <title>IFL-Network — Servizi</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #F4F6F9;
+      color: #1E3A5F;
+    }
+
+    /* NAVBAR */
+    nav {
+      background: #1E3A5F;
+      padding: 16px 48px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav-logo {
+      color: #fff;
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: #B5D4F4;
+      text-decoration: none;
+      font-size: 14px;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: #fff; }
+
+    /* DROPDOWN */
+    .dropdown { position: relative; }
+
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      top: calc(100% + 8px);
+      left: 50%;
+      transform: translateX(-50%);
+      background: #fff;
+      border: 0.5px solid #D0D8E4;
+      border-radius: 8px;
+      padding: 8px 0;
+      min-width: 220px;
+      box-shadow: 0 4px 16px rgba(30,58,95,0.10);
+      list-style: none;
+      z-index: 200;
+    }
+
+    .dropdown:hover .dropdown-menu { display: block; }
+
+    .dropdown-menu li a {
+      display: block;
+      padding: 9px 18px;
+      color: #1E3A5F;
+      font-size: 13px;
+      text-decoration: none;
+      white-space: nowrap;
+      transition: background 0.15s;
+    }
+
+    .dropdown-menu li a:hover {
+      background: #E8F1FB;
+      color: #2E6DB4;
+    }
+
+    /* HERO */
+    .hero {
+      background: #1E3A5F;
+      padding: 80px 48px 96px;
+      color: #fff;
+    }
+
+    .hero-tag {
+      background: #2E6DB4;
+      color: #E8F1FB;
+      font-size: 12px;
+      font-weight: 500;
+      padding: 5px 14px;
+      border-radius: 6px;
+      display: inline-block;
+      margin-bottom: 20px;
+      letter-spacing: 0.5px;
+    }
+
+    .hero h1 {
+      font-size: 36px;
+      font-weight: 600;
+      line-height: 1.3;
+      margin-bottom: 16px;
+      max-width: 600px;
+    }
+
+    .hero p {
+      font-size: 16px;
+      color: #B5D4F4;
+      line-height: 1.8;
+      max-width: 560px;
+    }
+
+    /* SEZIONI */
+    section {
+      padding: 64px 48px;
+    }
+
+    .section-label {
+      font-size: 11px;
+      font-weight: 600;
+      color: #2E6DB4;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .section-title {
+      font-size: 26px;
+      font-weight: 600;
+      color: #1E3A5F;
+      margin-bottom: 8px;
+    }
+
+    .section-subtitle {
+      font-size: 15px;
+      color: #5a7080;
+      line-height: 1.7;
+      max-width: 600px;
+      margin-bottom: 40px;
+    }
+
+    /* TWO COLUMNS */
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+
+    .col-block h3 {
+      font-size: 15px;
+      font-weight: 600;
+      color: #1E3A5F;
+      margin-bottom: 14px;
+    }
+
+    .col-block ul {
+      list-style: none;
+    }
+
+    .col-block ul li {
+      font-size: 14px;
+      color: #5a7080;
+      line-height: 1.7;
+      padding: 4px 0 4px 16px;
+      position: relative;
+    }
+
+    .col-block ul li::before {
+      content: '●';
+      position: absolute;
+      left: 0;
+      color: #2E6DB4;
+      font-size: 7px;
+      top: 8px;
+    }
+
+    /* SEZIONI SFONDO */
+    .bg-white { background: #fff; }
+    .bg-grey { background: #F4F6F9; }
+
+    /* FULL-WIDTH LIST */
+    .full-list {
+      list-style: none;
+      columns: 2;
+      column-gap: 40px;
+    }
+
+    .full-list li {
+      font-size: 14px;
+      color: #5a7080;
+      line-height: 1.7;
+      padding: 4px 0 4px 16px;
+      position: relative;
+      break-inside: avoid;
+    }
+
+    .full-list li::before {
+      content: '●';
+      position: absolute;
+      left: 0;
+      color: #2E6DB4;
+      font-size: 7px;
+      top: 8px;
+    }
+
+    /* CARDS SERVIZI */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .card-link { text-decoration: none; display: block; }
+
+    .card {
+      background: #F4F6F9;
+      border: 0.5px solid #D0D8E4;
+      border-radius: 12px;
+      padding: 28px 24px;
+      transition: border-color 0.2s;
+    }
+
+    .card:hover { border-color: #2E6DB4; }
+
+    .card-icon {
+      width: 44px;
+      height: 44px;
+      background: #E8F1FB;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 16px;
+    }
+
+    .card-icon svg {
+      width: 22px;
+      height: 22px;
+      stroke: #2E6DB4;
+      fill: none;
+      stroke-width: 1.5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .card h3 {
+      font-size: 15px;
+      font-weight: 600;
+      color: #1E3A5F;
+      margin-bottom: 8px;
+    }
+
+    .card p {
+      font-size: 13px;
+      color: #5a7080;
+      line-height: 1.7;
+    }
+
+    /* CONTATTI INLINE */
+    .contatti-inline-section {
+      background: #F4F6F9;
+      padding: 40px 48px;
+      border-top: 1px solid #D0D8E4;
+    }
+
+    .contatti-inline {
+      display: flex;
+      gap: 40px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .contatti-inline span {
+      font-size: 14px;
+      color: #5a7080;
+    }
+
+    .contatti-inline a {
+      color: #2E6DB4;
+      text-decoration: none;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #1E3A5F;
+      padding: 20px 48px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    footer span {
+      color: #B5D4F4;
+      font-size: 12px;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      nav { padding: 14px 24px; }
+      .nav-links { gap: 20px; }
+      .hero { padding: 48px 24px 64px; }
+      .hero h1 { font-size: 26px; }
+      section { padding: 48px 24px; }
+      .two-col { grid-template-columns: 1fr; }
+      .full-list { columns: 1; }
+      .contatti-inline-section { padding: 32px 24px; }
+      .contatti-inline { flex-direction: column; gap: 12px; align-items: center; text-align: center; }
+      footer { flex-direction: column; gap: 8px; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+    <a href="../Index.html" class="nav-logo">IFL-Network</a>
+    <ul class="nav-links">
+      <li class="dropdown">
+        <a href="index.html">Servizi ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="certificazioni.html">Certificazioni</a></li>
+          <li><a href="sicurezza-in-azienda.html">Sicurezza in azienda</a></li>
+          <li><a href="controllo-di-gestione.html">Controllo di gestione</a></li>
+          <li><a href="domande-di-brevetto-industriale.html">Brevetti industriali</a></li>
+        </ul>
+      </li>
+      <li><a href="../Index.html#contatti">Contatti</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-tag">I nostri servizi</div>
+    <h1>Affiancamento mirato<br>alle esigenze del cliente</h1>
+    <p>Ci focalizziamo sui risultati richiesti dall'organizzazione, affrontando i problemi in modo diretto e obiettivo.</p>
+  </div>
+
+  <!-- COME OPERIAMO -->
+  <section class="bg-white">
+    <div class="section-label">Il nostro metodo</div>
+    <div class="section-title">Come operiamo</div>
+    <div class="two-col">
+      <div class="col-block">
+        <h3>Come operiamo</h3>
+        <ul>
+          <li>Ci focalizziamo sui risultati richiesti dall'organizzazione.</li>
+          <li>Affrontiamo i problemi in modo diretto ed oggettivo.</li>
+          <li>Creiamo percorsi personalizzati di crescita.</li>
+          <li>Realizziamo strumenti informatici ad hoc, per quanto richiesto ed opportuno.</li>
+          <li>Effettuiamo analisi tecniche e gestionali.</li>
+          <li>Riduciamo l'impegno ed il tempo che le persone dedicano ai documenti.</li>
+        </ul>
+      </div>
+      <div class="col-block">
+        <h3>Step operativi</h3>
+        <ul>
+          <li>Checkup periodici delle attività aziendali.</li>
+          <li>Analisi delle potenziali aree di miglioramento.</li>
+          <li>Valutazione delle risorse che l'organizzazione può dedicare a ciascun progetto.</li>
+          <li>Elaborazione dei piani di intervento migliorativo e correttivo.</li>
+          <li>Formazione ed affiancamento metodologico alle risorse aziendali.</li>
+          <li>Realizzazione di documenti di gestione interna ed anche ai fini della presentazione ad enti competenti.</li>
+          <li>Esecuzione e verbalizzazione di riunioni strategiche.</li>
+          <li>Assistenza durante le verifiche da parte di clienti ed enti terzi.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOCUS SISTEMI DI GESTIONE -->
+  <section class="bg-grey">
+    <div class="section-label">Specializzazione</div>
+    <div class="section-title">Focus sui sistemi di gestione</div>
+    <ul class="full-list">
+      <li>Pianificazione, attuazione e verifica di efficacia di obiettivi per la qualità.</li>
+      <li>Esecuzione di audit interni e supporto durante gli audit di certificazione.</li>
+      <li>Presenza durante gli audit dei clienti ed indicazioni di appropriate modalità di interfaccia.</li>
+      <li>Riesami di direzione: raccolta dei contenuti, verifica delle decisioni, appropriata verbalizzazione.</li>
+      <li>Valutazioni dei rischi e delle opportunità d'impresa.</li>
+      <li>Valutazione delle competenze.</li>
+      <li>Formazione: pianificazione, erogazione, monitoraggio e verifica di efficacia.</li>
+      <li>Sostegno metodologico alla Direzione per la realizzazione di sistemi di controllo interni.</li>
+      <li>Assistenza durante gli audit dei fornitori e valutazione numerica delle loro prestazioni.</li>
+    </ul>
+  </section>
+
+  <!-- INFORMATICA PERSONALIZZATA -->
+  <section class="bg-white">
+    <div class="section-label">Strumenti informatici</div>
+    <div class="section-title">Informatica personalizzata</div>
+    <p class="section-subtitle">Programmazione creata ad hoc per le specifiche esigenze del cliente.</p>
+    <ul class="full-list">
+      <li>Informatizzazione generale dei sistemi di gestione e di ogni matematica richiesta dal cliente.</li>
+      <li>Elaborazione dei risultati ai fini delle valutazioni aziendali.</li>
+      <li>Monitoraggio dell'andamento delle attività operative e sui risultati dei controlli di processo.</li>
+      <li>Calcolo di indicatori statistici di capacità produttiva.</li>
+      <li>Gestione delle prestazioni dei fornitori.</li>
+      <li>Elaborazione dei risultati del controllo di gestione.</li>
+      <li>Analisi numeriche da utilizzare come supporto durante le decisioni di investimento.</li>
+      <li>Promemoria automatizzati per la gestione delle non conformità e delle azioni correttive.</li>
+      <li>Misurazione del miglioramento.</li>
+    </ul>
+  </section>
+
+  <!-- CARD SERVIZI -->
+  <section class="bg-grey">
+    <div class="section-label">Cosa facciamo</div>
+    <div class="section-title">I nostri servizi</div>
+    <p class="section-subtitle">Progettazione, realizzazione e attivazione in azienda di sistemi organizzativi, documenti tecnici e modelli matematici.</p>
+    <div class="cards-grid">
+
+      <a href="certificazioni.html" class="card-link">
+        <div class="card">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
+          </div>
+          <h3>Certificazioni</h3>
+          <p>Sistemi di gestione per la qualità, l'ambiente e la sicurezza.</p>
+        </div>
+      </a>
+
+      <a href="sicurezza-in-azienda.html" class="card-link">
+        <div class="card">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3>Sicurezza in azienda</h3>
+          <p>Monitoraggio delle attività per la sicurezza delle macchine e sul luogo di lavoro.</p>
+        </div>
+      </a>
+
+      <a href="controllo-di-gestione.html" class="card-link">
+        <div class="card">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24"><path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+          </div>
+          <h3>Controllo di gestione</h3>
+          <p>Mantenere sotto controllo le prestazioni economiche e sviluppare progetti di investimento.</p>
+        </div>
+      </a>
+
+      <a href="domande-di-brevetto-industriale.html" class="card-link">
+        <div class="card">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24"><path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+          </div>
+          <h3>Brevetti industriali</h3>
+          <p>Elaborazione e presentazione di domande di brevetto industriale.</p>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- CONTATTI COMPATTI -->
+  <div class="contatti-inline-section">
+    <div class="contatti-inline">
+      <span>📍 Via Ponchielli, 32 — 23900 Lecco (LC)</span>
+      <span>📞 +39 331 389 1023 / +39 338 634 4444</span>
+      <span>✉ <a href="mailto:info@ifl-network.it">info@ifl-network.it</a></span>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <span>IFL-Network di Giacomo Luzzi — Via Ponchielli, 32 — 23900 Lecco (LC)</span>
+    <span>© 2026 IFL-Network</span>
+  </footer>
+
+</body>
+</html>
