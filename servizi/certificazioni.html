@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Consulenza per certificazioni ISO 9001, ISO 45001 e ISO 14001. Implementazione sistemi di gestione certificabili. Lecco.">
+  <title>IFL-Network — Certificazioni ISO</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', Arial, sans-serif; background: #F4F6F9; color: #1E3A5F; }
+
+    nav { background: #1E3A5F; padding: 16px 48px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; }
+    .nav-logo { color: #fff; font-size: 18px; font-weight: 600; letter-spacing: 0.5px; text-decoration: none; }
+    .nav-links { display: flex; gap: 32px; list-style: none; }
+    .nav-links a { color: #B5D4F4; text-decoration: none; font-size: 14px; transition: color 0.2s; }
+    .nav-links a:hover { color: #fff; }
+    .dropdown { position: relative; }
+    .dropdown-menu { display: none; position: absolute; top: calc(100% + 8px); left: 50%; transform: translateX(-50%); background: #fff; border: 0.5px solid #D0D8E4; border-radius: 8px; padding: 8px 0; min-width: 220px; box-shadow: 0 4px 16px rgba(30,58,95,0.10); list-style: none; z-index: 200; }
+    .dropdown:hover .dropdown-menu { display: block; }
+    .dropdown-menu li a { display: block; padding: 9px 18px; color: #1E3A5F; font-size: 13px; text-decoration: none; white-space: nowrap; transition: background 0.15s; }
+    .dropdown-menu li a:hover { background: #E8F1FB; color: #2E6DB4; }
+
+    .hero { background: #1E3A5F; padding: 60px 48px 80px; color: #fff; }
+    .breadcrumb { font-size: 13px; color: #B5D4F4; margin-bottom: 16px; }
+    .breadcrumb a { color: #B5D4F4; text-decoration: none; }
+    .breadcrumb a:hover { color: #fff; }
+    .hero h1 { font-size: 34px; font-weight: 600; line-height: 1.3; margin-bottom: 12px; }
+    .hero-intro { font-size: 16px; color: #B5D4F4; line-height: 1.8; max-width: 600px; }
+
+    .content-section { padding: 56px 48px; background: #fff; }
+    .content-section-alt { padding: 56px 48px; background: #F4F6F9; }
+    .section-label { font-size: 11px; font-weight: 600; color: #2E6DB4; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 8px; }
+    .section-title { font-size: 22px; font-weight: 600; color: #1E3A5F; margin-bottom: 32px; }
+
+    .cert-block { margin-bottom: 48px; }
+    .cert-block:last-child { margin-bottom: 0; }
+    .cert-block h3 { font-size: 16px; font-weight: 600; color: #1E3A5F; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid #D0D8E4; }
+    .cert-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+    .cert-col h4 { font-size: 12px; font-weight: 600; color: #2E6DB4; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 10px; }
+    .cert-col ul { list-style: none; }
+    .cert-col ul li { font-size: 14px; color: #5a7080; line-height: 1.7; padding: 3px 0 3px 16px; position: relative; }
+    .cert-col ul li::before { content: '●'; position: absolute; left: 0; color: #2E6DB4; font-size: 7px; top: 8px; }
+
+    .contatti-inline-section { background: #F4F6F9; padding: 40px 48px; border-top: 1px solid #D0D8E4; }
+    .contatti-inline { display: flex; gap: 40px; flex-wrap: wrap; justify-content: center; }
+    .contatti-inline span { font-size: 14px; color: #5a7080; }
+    .contatti-inline a { color: #2E6DB4; text-decoration: none; }
+
+    footer { background: #1E3A5F; padding: 20px 48px; display: flex; justify-content: space-between; align-items: center; }
+    footer span { color: #B5D4F4; font-size: 12px; }
+
+    @media (max-width: 768px) {
+      nav { padding: 14px 24px; }
+      .nav-links { gap: 20px; }
+      .hero { padding: 40px 24px 56px; }
+      .hero h1 { font-size: 26px; }
+      .content-section, .content-section-alt { padding: 40px 24px; }
+      .cert-cols { grid-template-columns: 1fr; }
+      .contatti-inline-section { padding: 32px 24px; }
+      .contatti-inline { flex-direction: column; gap: 12px; align-items: center; text-align: center; }
+      footer { flex-direction: column; gap: 8px; text-align: center; padding: 16px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="../Index.html" class="nav-logo">IFL-Network</a>
+    <ul class="nav-links">
+      <li class="dropdown">
+        <a href="index.html">Servizi ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="certificazioni.html">Certificazioni</a></li>
+          <li><a href="sicurezza-in-azienda.html">Sicurezza in azienda</a></li>
+          <li><a href="controllo-di-gestione.html">Controllo di gestione</a></li>
+          <li><a href="domande-di-brevetto-industriale.html">Brevetti industriali</a></li>
+        </ul>
+      </li>
+      <li><a href="../Index.html#contatti">Contatti</a></li>
+    </ul>
+  </nav>
+
+  <div class="hero">
+    <nav class="breadcrumb" aria-label="breadcrumb">
+      <a href="../Index.html">Home</a> › <a href="index.html">Servizi</a> › Certificazioni
+    </nav>
+    <h1>Certificazioni</h1>
+    <p class="hero-intro">Forniamo consulenze qualificate per l'implementazione di sistemi di gestione certificabili conformi alle normative internazionali ISO.</p>
+  </div>
+
+  <div class="content-section">
+    <div class="section-label">Obiettivi per le aziende</div>
+    <div class="section-title">Certificazioni disponibili</div>
+
+    <div class="cert-block">
+      <h3>Certificazione Qualità ISO 9001</h3>
+      <div class="cert-cols">
+        <div class="cert-col">
+          <h4>Obiettivi esterni</h4>
+          <ul>
+            <li>Generare fiducia nel mercato di riferimento</li>
+            <li>Promuovere i propri prodotti e servizi presentandosi con una qualifica internazionale</li>
+            <li>Rispondere con il giusto approccio alle richieste della propria clientela</li>
+            <li>Affrontare con efficacia gli audit effettuati dai committenti importanti</li>
+            <li>Dimostrare il livello di efficacia delle proprie attività e processi</li>
+            <li>Fornire evidenze oggettive della capacità di fornire qualità elevata e costante</li>
+            <li>Ottenere punteggi elevati nelle partecipazioni a gare d'appalto</li>
+            <li>Confermare conformità ai requisiti della norma</li>
+          </ul>
+        </div>
+        <div class="cert-col">
+          <h4>Obiettivi interni</h4>
+          <ul>
+            <li>Disegnare un nuovo modo di governo dell'azienda</li>
+            <li>Riorganizzare processi, attività, autorità e responsabilità</li>
+            <li>Monitorare e migliorare le prestazioni aziendali</li>
+            <li>Valutare e controllare i rischi</li>
+            <li>Misurare l'efficacia dei processi</li>
+            <li>Realizzare obiettivi di crescita e qualità</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="cert-block">
+      <h3>Certificazione Sicurezza ISO 45001</h3>
+      <div class="cert-cols">
+        <div class="cert-col">
+          <h4>Obiettivi esterni</h4>
+          <ul>
+            <li>Ridurre i rischi di ammende pecuniarie</li>
+            <li>Difendere l'azienda da risarcimenti</li>
+            <li>Accedere ad agevolazioni in gare d'appalto</li>
+            <li>Ottenere riduzione premio INAIL</li>
+            <li>Confermare conformità ai requisiti</li>
+          </ul>
+        </div>
+        <div class="cert-col">
+          <h4>Obiettivi interni</h4>
+          <ul>
+            <li>Attivare procedure di verifica periodica</li>
+            <li>Monitorare registrazioni obbligatorie</li>
+            <li>Controllare le prestazioni in sicurezza</li>
+            <li>Mantenere sotto controllo i rischi</li>
+            <li>Coinvolgere i dipendenti nel miglioramento</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="cert-block">
+      <h3>Certificazione Ambientale ISO 14001</h3>
+      <div class="cert-cols">
+        <div class="cert-col">
+          <h4>Obiettivi esterni</h4>
+          <ul>
+            <li>Presentarsi ai mercati sensibili ai temi ambientali</li>
+            <li>Ridurre rischi di sanzioni</li>
+            <li>Accedere ad agevolazioni in gare d'appalto</li>
+            <li>Fornire garanzie agli enti locali</li>
+            <li>Confermare conformità ai requisiti</li>
+          </ul>
+        </div>
+        <div class="cert-col">
+          <h4>Obiettivi interni</h4>
+          <ul>
+            <li>Valutare e migliorare gli impatti ambientali</li>
+            <li>Monitorare i requisiti legali ambientali</li>
+            <li>Mettere sotto controllo i rischi ambientali</li>
+            <li>Ridurre i possibili rischi verso le persone e il territorio</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="contatti-inline-section">
+    <div class="contatti-inline">
+      <span>📍 Via Ponchielli, 32 — 23900 Lecco (LC)</span>
+      <span>📞 +39 331 389 1023 / +39 338 634 4444</span>
+      <span>✉ <a href="mailto:info@ifl-network.it">info@ifl-network.it</a></span>
+    </div>
+  </div>
+
+  <footer>
+    <span>IFL-Network di Giacomo Luzzi — Via Ponchielli, 32 — 23900 Lecco (LC)</span>
+    <span>© 2026 IFL-Network</span>
+  </footer>
+
+</body>
+</html>
