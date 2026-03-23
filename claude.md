@@ -47,7 +47,7 @@ Abbandonare IONOS e ridurre i costi a ~12€/anno (solo rinnovo dominio).
 - Navbar fissa in alto
 - Hero section con titolo e CTA
 - 4 card servizi con icone SVG (no foto)
-- Sezione contatti: 3 colonne affiancate (Dove siamo, Contatti telefonici, Email) — senza mappa
+- Sezione contatti con mappa
 - Footer
 
 ---
@@ -95,7 +95,7 @@ git push
 ## Prossimi step da completare
 
 - [ ] Aggiungere logo nella navbar (salvare in `images/`, richiamare con `<img src="images/logo.png">`)
-- [ ] Valutare se aggiungere mappa Google Maps (al momento rimossa)
+- [ ] Aggiungere mappa Google Maps nella sezione contatti
 - [ ] Configurare **Google Analytics 4** (incollare script nell'`<head>` di index.html)
 - [ ] Configurare **Google Search Console** (verifica proprietà dominio)
 - [ ] Trasferire il dominio `ifl-network.it` su piano solo-dominio IONOS
