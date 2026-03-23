@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Analisi di fattibilità e presentazione domande di brevetto industriale e modelli di utilità. Lecco.">
+  <title>IFL-Network — Brevetti Industriali</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', Arial, sans-serif; background: #F4F6F9; color: #1E3A5F; }
+
+    nav { background: #1E3A5F; padding: 16px 48px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; }
+    .nav-logo { color: #fff; font-size: 18px; font-weight: 600; letter-spacing: 0.5px; text-decoration: none; }
+    .nav-links { display: flex; gap: 32px; list-style: none; }
+    .nav-links a { color: #B5D4F4; text-decoration: none; font-size: 14px; transition: color 0.2s; }
+    .nav-links a:hover { color: #fff; }
+    .dropdown { position: relative; }
+    .dropdown-menu { display: none; position: absolute; top: calc(100% + 8px); left: 50%; transform: translateX(-50%); background: #fff; border: 0.5px solid #D0D8E4; border-radius: 8px; padding: 8px 0; min-width: 220px; box-shadow: 0 4px 16px rgba(30,58,95,0.10); list-style: none; z-index: 200; }
+    .dropdown:hover .dropdown-menu { display: block; }
+    .dropdown-menu li a { display: block; padding: 9px 18px; color: #1E3A5F; font-size: 13px; text-decoration: none; white-space: nowrap; transition: background 0.15s; }
+    .dropdown-menu li a:hover { background: #E8F1FB; color: #2E6DB4; }
+
+    .hero { background: #1E3A5F; padding: 60px 48px 80px; color: #fff; }
+    .breadcrumb { font-size: 13px; color: #B5D4F4; margin-bottom: 16px; }
+    .breadcrumb a { color: #B5D4F4; text-decoration: none; }
+    .breadcrumb a:hover { color: #fff; }
+    .hero h1 { font-size: 34px; font-weight: 600; line-height: 1.3; }
+
+    .content-section { padding: 56px 48px; background: #fff; }
+    .content-section-alt { padding: 56px 48px; background: #F4F6F9; }
+    .section-label { font-size: 11px; font-weight: 600; color: #2E6DB4; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 8px; }
+    .section-title { font-size: 22px; font-weight: 600; color: #1E3A5F; margin-bottom: 20px; }
+    .section-text { font-size: 14px; color: #5a7080; line-height: 1.8; max-width: 720px; }
+
+    .service-list { list-style: none; margin-top: 20px; }
+    .service-list li { font-size: 14px; color: #5a7080; line-height: 1.7; padding: 4px 0 4px 16px; position: relative; }
+    .service-list li::before { content: '●'; position: absolute; left: 0; color: #2E6DB4; font-size: 7px; top: 8px; }
+
+    .contatti-inline-section { background: #F4F6F9; padding: 40px 48px; border-top: 1px solid #D0D8E4; }
+    .contatti-inline { display: flex; gap: 40px; flex-wrap: wrap; justify-content: center; }
+    .contatti-inline span { font-size: 14px; color: #5a7080; }
+    .contatti-inline a { color: #2E6DB4; text-decoration: none; }
+
+    footer { background: #1E3A5F; padding: 20px 48px; display: flex; justify-content: space-between; align-items: center; }
+    footer span { color: #B5D4F4; font-size: 12px; }
+
+    @media (max-width: 768px) {
+      nav { padding: 14px 24px; }
+      .nav-links { gap: 20px; }
+      .hero { padding: 40px 24px 56px; }
+      .hero h1 { font-size: 26px; }
+      .content-section, .content-section-alt { padding: 40px 24px; }
+      .contatti-inline-section { padding: 32px 24px; }
+      .contatti-inline { flex-direction: column; gap: 12px; align-items: center; text-align: center; }
+      footer { flex-direction: column; gap: 8px; text-align: center; padding: 16px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="../Index.html" class="nav-logo">IFL-Network</a>
+    <ul class="nav-links">
+      <li class="dropdown">
+        <a href="index.html">Servizi ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="certificazioni.html">Certificazioni</a></li>
+          <li><a href="sicurezza-in-azienda.html">Sicurezza in azienda</a></li>
+          <li><a href="controllo-di-gestione.html">Controllo di gestione</a></li>
+          <li><a href="domande-di-brevetto-industriale.html">Brevetti industriali</a></li>
+        </ul>
+      </li>
+      <li><a href="../Index.html#contatti">Contatti</a></li>
+    </ul>
+  </nav>
+
+  <div class="hero">
+    <nav class="breadcrumb" aria-label="breadcrumb">
+      <a href="../Index.html">Home</a> › <a href="index.html">Servizi</a> › Brevetti industriali
+    </nav>
+    <h1>Domande di brevetto industriale</h1>
+  </div>
+
+  <div class="content-section">
+    <div class="section-label">Informazioni generali</div>
+    <div class="section-title">Cos'è un brevetto</div>
+    <p class="section-text">Il brevetto è un attestato che esprime la proprietà industriale e garantisce la priorità ed il diritto esclusivo di sfruttamento commerciale di un'invenzione o di un modello di utilità, vietando tali attività ad altri soggetti non autorizzati. L'invenzione è un'innovazione tecnologica applicabile ai processi industriali, che si presenta come soluzione nuova, originale e concreta di un problema tecnico mai risolto prima. Il modello di utilità è invece una forma nuova di un'applicazione industriale esistente che, attraverso una specifica funzionalità tecnica, fornisce una particolare efficacia di utilizzo e comodità di applicazione o di impiego.</p>
+  </div>
+
+  <div class="content-section-alt">
+    <div class="section-label">Prima fase</div>
+    <div class="section-title">Analisi di fattibilità</div>
+    <p class="section-text">In collaborazione con lo staff tecnico aziendale:</p>
+    <ul class="service-list">
+      <li>Individuazione del problema tecnico industriale affrontato e della soluzione proposta.</li>
+      <li>Prima indagine sullo stato della tecnica preesistente.</li>
+      <li>Valutazione se tale soluzione proposta ha caratteristiche di innovazione.</li>
+      <li>Prima classificazione come invenzione o come modello di utilità.</li>
+    </ul>
+  </div>
+
+  <div class="content-section">
+    <div class="section-label">Seconda fase</div>
+    <div class="section-title">Presentazione della domanda</div>
+    <p class="section-text">In collaborazione con un mandatario autorizzato alla presentazione:</p>
+    <ul class="service-list">
+      <li>Seconda indagine approfondita sullo stato della tecnica preesistente.</li>
+      <li>Verifica dell'esistenza del passo inventivo.</li>
+      <li>Classificazione definitiva come invenzione o come modello di utilità.</li>
+      <li>Stesura delle rivendicazioni, che definiscono le caratteristiche innovative per le quali si chiede protezione.</li>
+      <li>Presentazione della domanda di brevetto all'Unione Italiana Brevetti e Marchi.</li>
+    </ul>
+  </div>
+
+  <div class="contatti-inline-section">
+    <div class="contatti-inline">
+      <span>📍 Via Ponchielli, 32 — 23900 Lecco (LC)</span>
+      <span>📞 +39 331 389 1023 / +39 338 634 4444</span>
+      <span>✉ <a href="mailto:info@ifl-network.it">info@ifl-network.it</a></span>
+    </div>
+  </div>
+
+  <footer>
+    <span>IFL-Network di Giacomo Luzzi — Via Ponchielli, 32 — 23900 Lecco (LC)</span>
+    <span>© 2026 IFL-Network</span>
+  </footer>
+
+</body>
+</html>
