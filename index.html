@@ -253,6 +253,31 @@
       top: 6px;
     }
 
+    .card-img-wrapper {
+      position: relative;
+      height: 160px;
+      margin: -28px -24px 20px;
+      border-radius: 12px 12px 0 0;
+      overflow: hidden;
+    }
+
+    .card-img-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .card-img-wrapper::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 70px;
+      background: linear-gradient(to bottom, transparent, #F4F6F9);
+    }
+
     /* CONTATTI */
     #contatti {
       background: #F4F6F9;
@@ -394,6 +419,9 @@
 
       <a href="servizi/certificazioni.html" class="card-link">
         <div class="card">
+          <div class="card-img-wrapper">
+            <img src="https://picsum.photos/seed/certificazioni/600/300" alt="Certificazioni">
+          </div>
           <div class="card-icon">
             <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
           </div>
