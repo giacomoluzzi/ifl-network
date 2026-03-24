@@ -27,11 +27,9 @@
     }
 
     .nav-logo {
-      color: #fff;
-      font-size: 18px;
-      font-weight: 600;
-      letter-spacing: 0.5px;
       text-decoration: none;
+      display: flex;
+      align-items: center;
     }
 
     .nav-links {
@@ -57,13 +55,13 @@
     .dropdown-menu {
       display: none;
       position: absolute;
-      top: calc(100% + 8px);
+      top: 100%;
       left: 50%;
       transform: translateX(-50%);
       background: #fff;
       border: 0.5px solid #D0D8E4;
       border-radius: 8px;
-      padding: 8px 0;
+      padding: 16px 0 8px;
       min-width: 220px;
       box-shadow: 0 4px 16px rgba(30,58,95,0.10);
       list-style: none;
@@ -362,7 +360,7 @@
 
   <!-- NAVBAR -->
   <nav>
-    <a href="#" class="nav-logo">IFL-Network</a>
+    <a href="#" class="nav-logo"><img src="images/IFL_Logo_W_Orizzontale.webp" alt="IFL-Network" height="36"></a>
     <ul class="nav-links">
       <li class="dropdown">
         <a href="servizi/index.html">Servizi ▾</a>
