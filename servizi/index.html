@@ -26,60 +26,15 @@
       z-index: 100;
     }
 
-    .nav-logo {
-      text-decoration: none;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 32px;
-      list-style: none;
-    }
-
-    .nav-links a {
-      color: #B5D4F4;
-      text-decoration: none;
-      font-size: 14px;
-      transition: color 0.2s;
-    }
-
+    .nav-logo { text-decoration: none; }
+    .nav-links { display: flex; gap: 32px; list-style: none; }
+    .nav-links a { color: #B5D4F4; text-decoration: none; font-size: 14px; transition: color 0.2s; }
     .nav-links a:hover { color: #fff; }
-
-    /* DROPDOWN */
     .dropdown { position: relative; }
-
-    .dropdown-menu {
-      display: none;
-      position: absolute;
-      top: 100%;
-      left: 50%;
-      transform: translateX(-50%);
-      background: #fff;
-      border: 0.5px solid #D0D8E4;
-      border-radius: 8px;
-      padding: 16px 0 8px;
-      min-width: 220px;
-      box-shadow: 0 4px 16px rgba(30,58,95,0.10);
-      list-style: none;
-      z-index: 200;
-    }
-
+    .dropdown-menu { display: none; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); background: #fff; border: 0.5px solid #D0D8E4; border-radius: 8px; padding: 16px 0 8px; min-width: 220px; box-shadow: 0 4px 16px rgba(30,58,95,0.10); list-style: none; z-index: 200; }
     .dropdown:hover .dropdown-menu { display: block; }
-
-    .dropdown-menu li a {
-      display: block;
-      padding: 9px 18px;
-      color: #1E3A5F;
-      font-size: 13px;
-      text-decoration: none;
-      white-space: nowrap;
-      transition: background 0.15s;
-    }
-
-    .dropdown-menu li a:hover {
-      background: #E8F1FB;
-      color: #2E6DB4;
-    }
+    .dropdown-menu li a { display: block; padding: 9px 18px; color: #1E3A5F; font-size: 13px; text-decoration: none; white-space: nowrap; transition: background 0.15s; }
+    .dropdown-menu li a:hover { background: #E8F1FB; color: #2E6DB4; }
 
     /* HERO */
     .hero {
@@ -90,218 +45,65 @@
       color: #fff;
     }
 
-    .hero-tag {
-      background: #2E6DB4;
-      color: #E8F1FB;
-      font-size: 12px;
-      font-weight: 500;
-      padding: 5px 14px;
-      border-radius: 6px;
-      display: inline-block;
-      margin-bottom: 20px;
-      letter-spacing: 0.5px;
-    }
-
-    .hero h1 {
-      font-size: 36px;
-      font-weight: 600;
-      line-height: 1.3;
-      margin-bottom: 16px;
-      max-width: 600px;
-    }
-
-    .hero p {
-      font-size: 16px;
-      color: #B5D4F4;
-      line-height: 1.8;
-      max-width: 560px;
-    }
+    .hero-tag { background: #2E6DB4; color: #E8F1FB; font-size: 12px; font-weight: 500; padding: 5px 14px; border-radius: 6px; display: inline-block; margin-bottom: 20px; letter-spacing: 0.5px; }
+    .hero h1 { font-size: 36px; font-weight: 600; line-height: 1.3; margin-bottom: 16px; max-width: 600px; }
+    .hero p { font-size: 16px; color: #B5D4F4; line-height: 1.8; max-width: 560px; }
 
     /* SEZIONI */
-    section {
-      padding: 64px 48px;
-    }
-
-    .section-label {
-      font-size: 11px;
-      font-weight: 600;
-      color: #2E6DB4;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      margin-bottom: 8px;
-    }
-
-    .section-title {
-      font-size: 26px;
-      font-weight: 600;
-      color: #1E3A5F;
-      margin-bottom: 8px;
-    }
-
-    .section-subtitle {
-      font-size: 15px;
-      color: #5a7080;
-      line-height: 1.7;
-      max-width: 600px;
-      margin-bottom: 40px;
-    }
+    section { padding: 64px 48px; }
+    .section-label { font-size: 11px; font-weight: 600; color: #2E6DB4; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 8px; }
+    .section-title { font-size: 26px; font-weight: 600; color: #1E3A5F; margin-bottom: 8px; }
+    .section-subtitle { font-size: 15px; color: #5a7080; line-height: 1.7; max-width: 600px; margin-bottom: 40px; }
 
     /* TWO COLUMNS */
-    .two-col {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 40px;
-    }
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+    .col-block h3 { font-size: 15px; font-weight: 600; color: #1E3A5F; margin-bottom: 14px; }
+    .col-block ul { list-style: none; }
+    .col-block ul li { font-size: 14px; color: #5a7080; line-height: 1.7; padding: 4px 0 4px 16px; position: relative; }
+    .col-block ul li::before { content: '●'; position: absolute; left: 0; color: #2E6DB4; font-size: 7px; top: 8px; }
 
-    .col-block h3 {
-      font-size: 15px;
-      font-weight: 600;
-      color: #1E3A5F;
-      margin-bottom: 14px;
-    }
-
-    .col-block ul {
-      list-style: none;
-    }
-
-    .col-block ul li {
-      font-size: 14px;
-      color: #5a7080;
-      line-height: 1.7;
-      padding: 4px 0 4px 16px;
-      position: relative;
-    }
-
-    .col-block ul li::before {
-      content: '●';
-      position: absolute;
-      left: 0;
-      color: #2E6DB4;
-      font-size: 7px;
-      top: 8px;
-    }
-
-    /* SEZIONI SFONDO */
+    /* SFONDO */
     .bg-white { background: #fff; }
     .bg-grey { background: #F4F6F9; }
 
     /* FULL-WIDTH LIST */
-    .full-list {
-      list-style: none;
-      columns: 2;
-      column-gap: 40px;
-    }
+    .full-list { list-style: none; columns: 2; column-gap: 40px; }
+    .full-list li { font-size: 14px; color: #5a7080; line-height: 1.7; padding: 4px 0 4px 16px; position: relative; break-inside: avoid; }
+    .full-list li::before { content: '●'; position: absolute; left: 0; color: #2E6DB4; font-size: 7px; top: 8px; }
 
-    .full-list li {
-      font-size: 14px;
-      color: #5a7080;
-      line-height: 1.7;
-      padding: 4px 0 4px 16px;
-      position: relative;
-      break-inside: avoid;
-    }
-
-    .full-list li::before {
-      content: '●';
-      position: absolute;
-      left: 0;
-      color: #2E6DB4;
-      font-size: 7px;
-      top: 8px;
-    }
-
-    /* CARDS SERVIZI */
-    .cards-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-    }
-
-    .card-link { text-decoration: none; display: block; }
-
-    .card {
-      background: #F4F6F9;
-      border: 0.5px solid #D0D8E4;
-      border-radius: 12px;
-      padding: 28px 24px;
-      transition: border-color 0.2s;
-    }
-
+    /* CARDS */
+    .cards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
+    .card-link { text-decoration: none; display: block; height: 100%; }
+    .card { background: #F4F6F9; border: 0.5px solid #D0D8E4; border-radius: 12px; padding: 28px 24px; transition: border-color 0.2s; height: 100%; }
     .card:hover { border-color: #2E6DB4; }
+    .card h3 { font-size: 15px; font-weight: 600; color: #1E3A5F; margin-bottom: 8px; }
+    .card p { font-size: 13px; color: #5a7080; line-height: 1.7; }
+    .card ul { list-style: none; margin-top: 10px; }
+    .card ul li { font-size: 13px; color: #5a7080; padding: 3px 0 3px 14px; position: relative; }
+    .card ul li::before { content: '●'; position: absolute; left: 0; color: #2E6DB4; font-size: 7px; top: 6px; }
 
-    .card-icon {
-      width: 44px;
-      height: 44px;
-      background: #E8F1FB;
-      border-radius: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 16px;
-    }
+    .card-img-wrapper { position: relative; height: 160px; margin: -28px -24px 20px; border-radius: 12px 12px 0 0; overflow: hidden; }
+    .card-img-wrapper img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .card-img-wrapper::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 100px; background: linear-gradient(to bottom, transparent 0%, #F4F6F9 85%); }
 
-    .card-icon svg {
-      width: 22px;
-      height: 22px;
-      stroke: #2E6DB4;
-      fill: none;
-      stroke-width: 1.5;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-    }
-
-    .card h3 {
-      font-size: 15px;
-      font-weight: 600;
-      color: #1E3A5F;
-      margin-bottom: 8px;
-    }
-
-    .card p {
-      font-size: 13px;
-      color: #5a7080;
-      line-height: 1.7;
-    }
-
-    /* CONTATTI INLINE */
-    .contatti-inline-section {
-      background: #F4F6F9;
-      padding: 40px 48px;
-      border-top: 1px solid #D0D8E4;
-    }
-
-    .contatti-inline {
-      display: flex;
-      gap: 40px;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-
-    .contatti-inline span {
-      font-size: 14px;
-      color: #5a7080;
-    }
-
-    .contatti-inline a {
-      color: #2E6DB4;
-      text-decoration: none;
-    }
+    /* CONTATTI */
+    #contatti { background: #F4F6F9; }
+    .contatti-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; align-items: stretch; }
+    .contatto-block { background: #fff; border: 0.5px solid #D0D8E4; border-radius: 12px; padding: 24px; }
+    .contatto-block-title { font-size: 11px; font-weight: 600; color: #2E6DB4; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 16px; }
+    .contatto-item { display: flex; gap: 14px; align-items: flex-start; }
+    .contatto-icon { width: 36px; height: 36px; background: #E8F1FB; border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .contatto-icon svg { width: 18px; height: 18px; stroke: #2E6DB4; fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+    .contatto-testo strong { display: block; font-size: 13px; font-weight: 600; color: #1E3A5F; margin-bottom: 2px; }
+    .contatto-testo span { font-size: 13px; color: #5a7080; line-height: 1.6; }
+    .contatto-testo a { font-size: 13px; color: #2E6DB4; text-decoration: none; }
 
     /* FOOTER */
-    footer {
-      background: #1E3A5F;
-      padding: 20px 48px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    footer span {
-      color: #B5D4F4;
-      font-size: 12px;
-    }
+    footer { background: #1E3A5F; padding: 20px 48px; display: flex; justify-content: space-between; align-items: center; }
+    footer span { color: #B5D4F4; font-size: 12px; }
 
     /* RESPONSIVE */
+    @media (max-width: 960px) and (min-width: 769px) { .contatti-grid { grid-template-columns: 1fr 1fr; } }
     @media (max-width: 768px) {
       nav { padding: 14px 24px; }
       .nav-links { gap: 20px; }
@@ -310,8 +112,7 @@
       section { padding: 48px 24px; }
       .two-col { grid-template-columns: 1fr; }
       .full-list { columns: 1; }
-      .contatti-inline-section { padding: 32px 24px; }
-      .contatti-inline { flex-direction: column; gap: 12px; align-items: center; text-align: center; }
+      .contatti-grid { grid-template-columns: 1fr; }
       footer { flex-direction: column; gap: 8px; text-align: center; }
     }
   </style>
@@ -418,18 +219,23 @@
 
       <a href="certificazioni.html" class="card-link">
         <div class="card">
-          <div class="card-icon">
-            <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
+          <div class="card-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=600&h=300&fit=crop&auto=format" alt="Certificazioni">
           </div>
           <h3>Certificazioni</h3>
           <p>Sistemi di gestione per la qualità, l'ambiente e la sicurezza.</p>
+          <ul>
+            <li>ISO 9001 Qualità</li>
+            <li>ISO 14001 Ambiente</li>
+            <li>ISO 45001 Sicurezza</li>
+          </ul>
         </div>
       </a>
 
       <a href="sicurezza-in-azienda.html" class="card-link">
         <div class="card">
-          <div class="card-icon">
-            <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <div class="card-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&h=300&fit=crop&auto=format" alt="Sicurezza in azienda">
           </div>
           <h3>Sicurezza in azienda</h3>
           <p>Monitoraggio delle attività per la sicurezza delle macchine e sul luogo di lavoro.</p>
@@ -438,8 +244,8 @@
 
       <a href="controllo-di-gestione.html" class="card-link">
         <div class="card">
-          <div class="card-icon">
-            <svg viewBox="0 0 24 24"><path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+          <div class="card-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=300&fit=crop&auto=format" alt="Controllo di gestione">
           </div>
           <h3>Controllo di gestione</h3>
           <p>Mantenere sotto controllo le prestazioni economiche e sviluppare progetti di investimento.</p>
@@ -448,8 +254,8 @@
 
       <a href="domande-di-brevetto-industriale.html" class="card-link">
         <div class="card">
-          <div class="card-icon">
-            <svg viewBox="0 0 24 24"><path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+          <div class="card-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=600&h=300&fit=crop&auto=format" alt="Brevetti industriali">
           </div>
           <h3>Brevetti industriali</h3>
           <p>Elaborazione e presentazione di domande di brevetto industriale.</p>
@@ -459,18 +265,56 @@
     </div>
   </section>
 
-  <!-- CONTATTI COMPATTI -->
-  <div class="contatti-inline-section">
-    <div class="contatti-inline">
-      <span>📍 Via Ponchielli, 32 — 23900 Lecco (LC)</span>
-      <span>📞 +39 331 389 1023 / +39 338 634 4444</span>
-      <span>✉ <a href="mailto:info@ifl-network.it">info@ifl-network.it</a></span>
+  <!-- CONTATTI -->
+  <section id="contatti">
+    <div class="section-label" style="font-size: 14px;">Contatti</div>
+    <div class="contatti-grid">
+
+      <div class="contatto-block">
+        <div class="contatto-block-title">Dove siamo</div>
+        <div class="contatto-item">
+          <div class="contatto-icon">
+            <svg viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          </div>
+          <div class="contatto-testo">
+            <strong>Indirizzo</strong>
+            <span>Via Ponchielli, 32<br>23900 Lecco (LC)</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="contatto-block">
+        <div class="contatto-block-title">Contatti telefonici</div>
+        <div class="contatto-item">
+          <div class="contatto-icon">
+            <svg viewBox="0 0 24 24"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+          </div>
+          <div class="contatto-testo">
+            <strong>Telefono</strong>
+            <span>+39 331 389 1023<br>+39 338 634 4444</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="contatto-block">
+        <div class="contatto-block-title">Email</div>
+        <div class="contatto-item">
+          <div class="contatto-icon">
+            <svg viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          </div>
+          <div class="contatto-testo">
+            <strong>Scrivici</strong>
+            <a href="mailto:info@ifl-network.it">info@ifl-network.it</a>
+          </div>
+        </div>
+      </div>
+
     </div>
-  </div>
+  </section>
 
   <!-- FOOTER -->
   <footer>
-    <span>IFL-Network di Giacomo Luzzi — Via Ponchielli, 32 — 23900 Lecco (LC)</span>
+    <span>IFL-Network di Giacomo Luzzi — P.IVA 04132820137 — Via Ponchielli, 32 — 23900 Lecco (LC)</span>
     <span>© 2026 IFL-Network</span>
   </footer>
 
